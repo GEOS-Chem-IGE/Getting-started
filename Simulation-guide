@@ -107,8 +107,10 @@ oarsub -S ./download-data.sh
 ```bash
 oarsub -S ./3_run.sh
 ```
-
-
+You can verify your job status with 
+´´´
+oarstat -u <your Perseus ID>
+´´´
 Setup
 -----
 
