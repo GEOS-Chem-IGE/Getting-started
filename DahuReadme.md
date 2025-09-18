@@ -7,7 +7,7 @@ Configuration scripts, environment specs, job script templates, and helper utili
 To run a simulation
 -------------------
 
-Follow the [simulation guide](Simulation-guide.md) to run a GEOS-Chem simulation.
+Follow the [simulation guide](Simulation-guide) to run a GEOS-Chem simulation.
 
 
 Project setup
