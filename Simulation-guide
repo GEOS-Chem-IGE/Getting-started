@@ -14,7 +14,26 @@ You should also have a basic familiarity with the unix command line and git. Man
 
 * [Introduction to Unix](https://swcarpentry.github.io/shell-novice/)
 * [Introduction to Git](https://swcarpentry.github.io/git-novice/)
+## Running a Job
 
+Before diving into the technical details, let’s use a simple analogy.
+Building executables and running a simulation can be thought of as taking a journey.
+
+Running your program without submitting it as a job is like riding a bicycle on a busy highway: you put yourself and others at risk, and the journey will be slow and unsafe.
+
+Running your program through a job scheduler is like renting a car and choosing the proper lanes: you travel faster, more safely, and you respect the rules of the road so that everyone can move smoothly.
+
+In practical terms, submitting a job means you tell the cluster:
+
+how many nodes (machines) you need,
+
+how many CPUs (or cores) you want to use,
+
+and which script or executable should be run.
+
+This is called a batch job: instead of running your program directly on the cluster, you request resources and the job scheduler runs it for you.
+
+On our system, we use OAR, a job scheduler designed for High-Performance Computing (HPC) clusters. It manages resources, ensures fair usage, and allows your simulation to run efficiently alongside other users’ jobs.
 
 Quickstart
 ----------
@@ -37,6 +56,7 @@ cd /home/PROJECTS/pr-geoschem/<your-research-dir>/<new-run-dir>
 rmdir OutputDir
 ln -s /bettik/PROJECTS/pr-geoschem/<your-username>/<new-output-dir> .
 ```
+bettic is a very fast shared filesystem built for clusters that stores data across many servers and disks. Multiple clients can read/write parts of the same file at once
 
 3. Copy the environment activation script:
 
